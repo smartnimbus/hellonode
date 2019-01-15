@@ -11,7 +11,7 @@
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = def customImage = docker.build("my-image:${env.BUILD_ID}")
+        def customImage = docker.build("my-image:${env.BUILD_ID}")
     }
 
     stage('Test image') {
